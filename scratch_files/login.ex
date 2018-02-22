@@ -18,4 +18,7 @@ defmodule Login do
   defp extract_password(%{"password" => password}), do: {:ok, password}
   defp extract_password(_), do: {:error, "password missing"}
 
+  def sum_numbers(list) do
+    Enum.reduce(list, 0, &+/2)
+  end
 end
